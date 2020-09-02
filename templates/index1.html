@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Diabetes Predictor</title>
+        
+        <style>
+            .form-input{
+                padding: 20px;
+                padding-right: 15px;
+                margin: 5px;
+            }
+            div {text-align: center;}
+            h1 {
+                color: black;
+                text-align: center;
+                text-decoration-line: underline;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+            }
+
+            .my-cta-button{
+                padding: 10px;
+                margin: 5px;
+            }
+            body{
+                background-color: rgb(245, 127, 127);
+            }
+
+            /* Footer */
+            .footer{
+	            flex-shrink: 0;
+	            position: relative;
+	            padding: 20px;
+	            background-size: 500% 500%;
+	            
+                    }
+            
+        </style>
+    </head>
+        <body>
+            <h1>Diabetes Predictor</h1>
+            <br>
+            <div>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <input class="form-input" type="text" name="pregnancies" placeholder="Pregnancies eg. 0"><br>
+                    <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+                    <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+                    <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+                    <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+                    <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+                    <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+                    <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 34"><br>
+    
+                    <input type="submit" class="my-cta-button" value="Predict">
+                </form>
+            </div>
+
+             <!-- Footer -->
+       <div class='footer'>
+        <p class='footer-description'>Made with ❤️ by Dishaa Agarwal.</p>
+        </div>
+
+        </body>
+</html>

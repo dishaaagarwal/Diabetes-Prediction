@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Diabetes Predictor</title>
+        <style>
+            h1 {
+                color: black;
+                text-align: center;
+                text-decoration-line: underline;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 30px;
+            }
+            div {text-align: center;}
+
+            /* Footer */
+            .footer{
+	            flex-shrink: 0;
+	            position: relative;
+	            padding: 20px;
+	            background-size: 500% 500%;
+	            
+                    }
+            
+        </style>
+    </head>
+        <body>
+            <h1>Diabetes Predictor</h1>
+            <br>
+            <div>
+                {% if prediction==1 %}
+                    <h2 style="color: darkolivegreen;">Prediction: <span class='danger'>Oops! You have DIABETES.</span></h2>
+                    
+                {% elif prediction==0 %}
+                    <h2 style="color: darkred;">Prediction: <span class='safe'>Great! You DON'T have diabetes.</span></h2>
+                {% endif %}
+            </div>
+
+                  <!-- Footer -->
+       <div class='footer'>
+        <p class='footer-description'>Made with ❤️ by Dishaa Agarwal.</p>
+        </div>
+
+
+        </body>
+</html>
